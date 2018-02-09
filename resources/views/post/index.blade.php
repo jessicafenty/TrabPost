@@ -46,8 +46,9 @@
                         <table class="table table-bordered table-striped" id="tabCoordenacoes">
                             <thead>
                             <tr>
-                                <td class="col-md-5"><strong>Título</strong></td>
-                                <td class="col-mb-4" align="center"><strong>Ações</strong></td>
+                                <td class="col-md-4"><strong>Usuário</strong></td>
+                                <td class="col-md-4"><strong>Título do Post</strong></td>
+                                <td class="col-mb-5" align="center"><strong>Ações</strong></td>
                             </tr>
                             </thead>
 
@@ -55,6 +56,7 @@
                             <tbody>
                             @foreach($posts as $post)
                                 <tr align="center">
+                                    <td align="left">{{ $post->user->name}}</td>
                                     <td align="left">{{ $post->title}}</td>
 
                                     <td>
